@@ -4,17 +4,17 @@ public class AllLess {
 
     public static ArrayList<String> checkLess( String[] heap, int len)
     {
-        ArrayList<String> lessthan = new ArrayList<>();
+        ArrayList<String> lessthan = new ArrayList<>(); // create an array list to
 
         for ( int a = 0; a< heap.length; a++)
         {
-            if ( heap[a].length() < len)
+            if ( heap[a].length() < len && !heap[a].isEmpty()) // checks to see if the string is less than the input length and is not empty
             {
-                lessthan.add(heap[a]);
+                lessthan.add(heap[a]);// adds string to the list
             }
         }
 
-        return lessthan;
+        return lessthan; // return less than list
 
     }
 

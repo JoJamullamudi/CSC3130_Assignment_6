@@ -38,8 +38,8 @@ public class EncryptedBT {
         int left = 3*val + 1; // makes left child value
         int right = 2*val + 5; // makes right child value
 
-        return checkVal(tree, element, index+1, left) || // runs check again with the left child
-         checkVal(tree, element, index+2, right);// runs check again with the right child
+        return checkVal(tree, element, 2*index+1, left) || // runs check again with the left child
+         checkVal(tree, element, 2*index+2, right);// runs check again with the right child
 
 
     }
