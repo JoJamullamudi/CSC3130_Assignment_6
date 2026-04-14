@@ -1,25 +1,25 @@
 public class EncryptedBT {
 
 
-    public boolean findElement( int[] tree, int element)
+    public static boolean findElement( int[] tree, int element)
     {
-        if( tree == null)
+        if( tree == null) // checks to see if tree has values
         {
             return false;
         }
-        if ( tree.length == 0)
+        if ( tree.length == 0) // checks to see if the tree has values
         {
             return false;
         }
-        if ( tree[0] == -1)
+        if ( tree[0] == -1) // checks to see that the root has a value
         {
             return false;
         }
 
-        return checkVal( )
+        return checkVal(tree, element, 0, 1 );
     }
 
-    public boolean checkVal( int[] tree, int element, int index, int val)
+    public static boolean checkVal( int[] tree, int element, int index, int val)
     {
         if (index >= tree.length) // checks to see if the current index is in bounds
         {
@@ -38,11 +38,21 @@ public class EncryptedBT {
         int left = 3*val + 1; // makes left child value
         int right = 2*val + 5; // makes right child value
 
-        checkVal(tree, element, index+1, left); // runs check again with the left child
-        checkVal(tree, element, index+2, right);// runs check again with the right child
+        return checkVal(tree, element, index+1, left) || // runs check again with the left child
+         checkVal(tree, element, index+2, right);// runs check again with the right child
 
 
     }
+
+    public static void main(String[] args)
+    {
+        int[] etree = { -2, -2, -1, -2, -1};
+
+        System.out.println(findElement(etree, 1));
+
+
+    }
+
 
 
 }

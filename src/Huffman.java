@@ -12,7 +12,7 @@ public class Huffman {
             {
                 counts.replace(input.charAt(a), (int)counts.get(input.charAt(a)) + 1);
             }
-            lse
+            else
             {
                 counts.put(input.charAt(a), 1);
             }
