@@ -48,7 +48,7 @@ public class EncryptedBT {
     {
         int[] etree = { -2, -2, -1, -2, -1};
 
-        System.out.println(findElement(etree, 1));
+        System.out.println(findElement(etree, 4));
 
 
     }
